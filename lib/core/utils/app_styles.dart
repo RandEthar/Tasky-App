@@ -10,7 +10,10 @@ class TextStyles {
     fontWeight: FontWeight.w500,
     fontSize: 14,
   );
-
+  static final TextStyle medium16= GoogleFonts.plusJakartaSans(
+    fontWeight: FontWeight.w500,
+    fontSize: 16,
+  );
   static final TextStyle semiBold24 = GoogleFonts.plusJakartaSans(
     fontWeight: FontWeight.w600,
     fontSize: 24,
