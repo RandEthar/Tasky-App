@@ -38,7 +38,7 @@ class DashboardBodyHeader extends StatelessWidget {
          const Spacer(),
          SvgPicture.asset(Assets.imagesNotification),
           const SizedBox(width: 24),
-          SvgPicture.asset(Assets.imagesProfil),
+       Image.asset(Assets.imagesProfil),
           const SizedBox(width: 16),
         
          
@@ -47,3 +47,4 @@ class DashboardBodyHeader extends StatelessWidget {
     );
   }
 }
+

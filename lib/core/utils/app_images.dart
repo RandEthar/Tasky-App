@@ -23,8 +23,8 @@ class Assets {
   static const String imagesOverview = "assets/images/overview.svg";
 
   /// Assets for imagesProfil
-  /// assets/images/Profil.svg
-  static const String imagesProfil = "assets/images/Profil.svg";
+  /// assets/images/Profil.png
+  static const String imagesProfil = "assets/images/Profil.png";
 
   /// Assets for imagesSettings
   /// assets/images/settings.svg
