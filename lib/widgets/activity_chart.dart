@@ -7,6 +7,7 @@
 import 'package:flutter/material.dart';
 import 'package:tasky_app/core/utils/app_color.dart';
 import 'package:tasky_app/widgets/activity_chart_header.dart';
+import 'package:tasky_app/widgets/custom_linear_chart.dart';
 
 class ActivityChart extends StatelessWidget {
   const ActivityChart({super.key});
@@ -19,10 +20,12 @@ class ActivityChart extends StatelessWidget {
         color: AppColor.contanrackground,
         borderRadius: BorderRadius.all(Radius.circular(10)),
       ),
-      child:const Column(
+      child: const Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-        ActivityChartHeader()
+        ActivityChartHeader(),
+        SizedBox(height: 20),
+      Expanded(child: CustomLinearChart())
         ],
       ),
     );
