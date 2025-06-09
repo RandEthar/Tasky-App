@@ -18,7 +18,7 @@ class DashboardDesktopLayout extends StatelessWidget {
 
           Expanded(
             child: DashboardBody(
-              // This widget should be defined in your project
+            
             ),
           ),
         ],

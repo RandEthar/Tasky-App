@@ -2,6 +2,7 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:tasky_app/widgets/activity_chart.dart';
 import 'package:tasky_app/widgets/dashboard_body_header.dart';
 
 import 'package:tasky_app/widgets/percent_indicator_section.dart';
@@ -18,6 +19,8 @@ class DashboardBody extends StatelessWidget {
    Row(
      children: [
        PercentIndicatorSection(),
+        SizedBox(width: 36,),
+       ActivityChart(),
      ],
    ),
 
