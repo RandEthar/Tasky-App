@@ -1,13 +1,104 @@
-
-
-
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:tasky_app/core/utils/app_images.dart';
 
-class MonthlyMentorsListView extends StatelessWidget {
+import 'package:tasky_app/widgets/monthly_mentors_list_item.dart';
+
+class MonthlyMentorsListView extends StatefulWidget {
   const MonthlyMentorsListView({super.key});
 
   @override
+  State<MonthlyMentorsListView> createState() => _MonthlyMentorsListViewState();
+}
+
+class _MonthlyMentorsListViewState extends State<MonthlyMentorsListView> {
+  final ScrollController _scrollController = ScrollController();
+  bool activeRight = true;
+  bool activeLeft = false;
+  void scrollRight() {
+    _scrollController.animateTo(
+      _scrollController.offset + 200,
+      duration: const Duration(milliseconds: 300),
+      curve: Curves.easeInOut,
+    );
+  }
+
+  void scrollLeft() {
+    _scrollController.animateTo(
+      _scrollController.offset - 200,
+      duration: const Duration(milliseconds: 300),
+      curve: Curves.easeInOut,
+    );
+  }
+
+  @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Column(
+      children: [
+        // Header with arrows
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            const Text(
+              'Monthly Mentors',
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.w600),
+            ),
+            Row(
+              children: [
+                IconButton(
+                  icon: SvgPicture.asset(
+                      activeLeft
+                          ? Assets.imagesArrowLeftActive
+                          : Assets.imagesArrowLeft,
+                      height: 24),
+                  onPressed: () {
+                    scrollLeft();
+
+
+                    setState(() {
+                      activeLeft = true;
+                      activeRight = false;
+                    });
+                  },
+                ),
+                const SizedBox(width: 10),
+                IconButton(
+                  icon: SvgPicture.asset(
+                      activeRight
+                          ? Assets.imagesArrowRight
+                          : Assets.imagesArrowRightInactive,
+                      height: 24),
+                  onPressed: () {
+                    scrollRight();
+                    setState(() {
+                      activeRight = true;
+                      activeLeft = false;
+                    });
+                  },
+                ),
+              ],
+            )
+          ],
+        ),
+
+        const SizedBox(height: 16),
+
+        // The list view
+        SizedBox(
+          height: 140,
+          child: ListView.builder(
+            controller: _scrollController,
+            scrollDirection: Axis.horizontal,
+            itemCount: 10,
+            itemBuilder: (context, index) {
+              return const Padding(
+                padding: EdgeInsets.only(right: 32),
+                child: IntrinsicWidth(child: MonthlyMentorsListItem()),
+              );
+            },
+          ),
+        ),
+      ],
+    );
   }
 }

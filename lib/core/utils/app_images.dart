@@ -10,9 +10,17 @@ class Assets {
   /// assets/images/arrow-left.svg
   static const String imagesArrowLeft = "assets/images/arrow-left.svg";
 
+  /// Assets for imagesArrowLeftActive
+  /// assets/images/arrow-left_active.svg
+  static const String imagesArrowLeftActive = "assets/images/arrow-left_active.svg";
+
   /// Assets for imagesArrowRight
   /// assets/images/arrow-right.svg
   static const String imagesArrowRight = "assets/images/arrow-right.svg";
+
+  /// Assets for imagesArrowRightInactive
+  /// assets/images/arrow-right_inactive.svg
+  static const String imagesArrowRightInactive = "assets/images/arrow-right_inactive.svg";
 
   /// Assets for imagesImages
   /// assets/images/images.svg

@@ -22,10 +22,8 @@ class DashboardBody extends StatelessWidget {
         children: [
         PercentIndicatorSection(),
          SizedBox(width: 36),
-          Expanded(
-            child: ActivityChart(),
-          ),
-
+          Expanded(child: ActivityChart()),
+      
         ],
       ),
     ),

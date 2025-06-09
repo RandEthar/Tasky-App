@@ -9,7 +9,7 @@ class TasksAndReviews extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+     
       children: [
         Row(children: [
            SvgPicture.asset(Assets.imagesNote,
@@ -21,6 +21,7 @@ class TasksAndReviews extends StatelessWidget {
                 color: const Color(0x7FEBEDFA),
             ),)
         ],),
+        const SizedBox(width: 44,),
            Row(children: [
            SvgPicture.asset(Assets.imagesStar,
               height: 24,
