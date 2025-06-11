@@ -20,7 +20,7 @@ class MonthlyMentorsListItem extends StatelessWidget {
 
        ListTileMentors(),
   SizedBox(height: 10),
-    TasksAndReviews(),
+    FittedBox(child: TasksAndReviews()),
       ],),
       
       

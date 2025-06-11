@@ -22,6 +22,18 @@ class Assets {
   /// assets/images/arrow-right_inactive.svg
   static const String imagesArrowRightInactive = "assets/images/arrow-right_inactive.svg";
 
+  /// Assets for imagesCreatingMobileDesign
+  /// assets/images/creating_mobile_design.jpg
+  static const String imagesCreatingMobileDesign = "assets/images/creating_mobile_design.jpg";
+
+  /// Assets for imagesFolowers
+  /// assets/images/folowers.jpeg
+  static const String imagesFolowers = "assets/images/folowers.jpeg";
+
+  /// Assets for imagesImage
+  /// assets/images/image.jpeg
+  static const String imagesImage = "assets/images/image.jpeg";
+
   /// Assets for imagesImages
   /// assets/images/images.svg
   static const String imagesImages = "assets/images/images.svg";
@@ -54,6 +66,10 @@ class Assets {
   /// assets/images/Profil.png
   static const String imagesProfil = "assets/images/Profil.png";
 
+  /// Assets for imagesRand
+  /// assets/images/rand.jpg
+  static const String imagesRand = "assets/images/rand.jpg";
+
   /// Assets for imagesSettings
   /// assets/images/settings.svg
   static const String imagesSettings = "assets/images/settings.svg";
@@ -69,5 +85,9 @@ class Assets {
   /// Assets for imagesTaskeManegar
   /// assets/images/taske_manegar.svg
   static const String imagesTaskeManegar = "assets/images/taske_manegar.svg";
+
+  /// Assets for imagesTimeCircle
+  /// assets/images/Time_Circle.svg
+  static const String imagesTimeCircle = "assets/images/Time_Circle.svg";
 }
 

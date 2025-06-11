@@ -12,9 +12,17 @@ class MonthlyMentorsListView extends StatefulWidget {
 }
 
 class _MonthlyMentorsListViewState extends State<MonthlyMentorsListView> {
-  final ScrollController _scrollController = ScrollController();
+  late ScrollController _scrollController ;
   bool activeRight = true;
   bool activeLeft = false;
+@override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    _scrollController = ScrollController();
+  }
+
+
   void scrollRight() {
     _scrollController.animateTo(
       _scrollController.offset + 200,
@@ -29,6 +37,12 @@ class _MonthlyMentorsListViewState extends State<MonthlyMentorsListView> {
       duration: const Duration(milliseconds: 300),
       curve: Curves.easeInOut,
     );
+  }
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    super.dispose();
+    _scrollController.dispose();
   }
 
   @override
@@ -87,6 +101,7 @@ class _MonthlyMentorsListViewState extends State<MonthlyMentorsListView> {
         SizedBox(
           height: 140,
           child: ListView.builder(
+            shrinkWrap: true,
             controller: _scrollController,
             scrollDirection: Axis.horizontal,
             itemCount: 10,

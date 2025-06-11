@@ -27,7 +27,7 @@ class _SliderWidgetState extends State<SliderWidget> {
         ),
         SliderTheme(
           data: SliderTheme.of(context).copyWith(
-            trackHeight: 10,
+            trackHeight: 6,
             activeTrackColor: AppColor.secondary,
             inactiveTrackColor: const Color(0xffBAC8FF),
             thumbShape: _CustomThumbShape(),
@@ -78,7 +78,7 @@ class _CustomThumbShape extends SliderComponentShape {
       ..color = AppColor.secondary
       ..style = PaintingStyle.fill;
 
-    canvas.drawCircle(center, 12, outerPaint);
-    canvas.drawCircle(center, 8, innerPaint);
+    canvas.drawCircle(center, 8, outerPaint);
+    canvas.drawCircle(center, 6, innerPaint);
   }
 }
