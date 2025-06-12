@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:tasky_app/core/helper_function.dart/scroll_list.dart';
 import 'package:tasky_app/core/utils/app_images.dart';
 
 import 'package:tasky_app/widgets/monthly_mentors_list_item.dart';
@@ -23,21 +24,7 @@ class _MonthlyMentorsListViewState extends State<MonthlyMentorsListView> {
   }
 
 
-  void scrollRight() {
-    _scrollController.animateTo(
-      _scrollController.offset + 200,
-      duration: const Duration(milliseconds: 300),
-      curve: Curves.easeInOut,
-    );
-  }
-
-  void scrollLeft() {
-    _scrollController.animateTo(
-      _scrollController.offset - 200,
-      duration: const Duration(milliseconds: 300),
-      curve: Curves.easeInOut,
-    );
-  }
+ 
   @override
   void dispose() {
     // TODO: implement dispose
@@ -66,7 +53,7 @@ class _MonthlyMentorsListViewState extends State<MonthlyMentorsListView> {
                           : Assets.imagesArrowLeft,
                       height: 24),
                   onPressed: () {
-                    scrollLeft();
+                    scrollLeft(scrollController: _scrollController);
 
 
                     setState(() {
@@ -83,7 +70,7 @@ class _MonthlyMentorsListViewState extends State<MonthlyMentorsListView> {
                           : Assets.imagesArrowRightInactive,
                       height: 24),
                   onPressed: () {
-                    scrollRight();
+                    scrollRight(scrollController: _scrollController);
                     setState(() {
                       activeRight = true;
                       activeLeft = false;

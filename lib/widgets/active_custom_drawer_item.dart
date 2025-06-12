@@ -17,19 +17,24 @@ class ActiveCustomDrawerItem extends StatelessWidget {
     return AnimatedContainer(
       duration: const Duration(milliseconds: 300),
       curve: Curves.easeInOut,
-      padding: const EdgeInsets.only(left: 20, right: 20, top: 10, bottom: 10),
+      padding: const EdgeInsets.only(left: 20,  top: 10, bottom: 10),
       decoration: BoxDecoration(
         color: AppColor.secondary,
         borderRadius: BorderRadius.circular(8),
       ),
-      child: Row(
-        children: [
-          SvgPicture.asset(
-            item.iconPath,
-          ),
-          const SizedBox(width: 16),
-          Text(item.title, style: TextStyles.medium24),
-        ],
+      child: Container(
+       
+        child: Row(
+     
+          children: [
+            SvgPicture.asset(
+              item.iconPath,
+            ),
+          const  SizedBox(width: 16,),
+           
+           Text(item.title, style: TextStyles.medium24),
+          ],
+        ),
       ),
     );
   }

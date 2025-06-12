@@ -19,7 +19,7 @@ class DashboardBody extends StatelessWidget {
             child: Row(
               children: [
                 Expanded(
-                  flex: 2,
+                  flex: 3,
                   child: Column(
                             children: [
                   DashboardBodyHeader(),
@@ -42,7 +42,7 @@ class DashboardBody extends StatelessWidget {
                 ),
                   SizedBox(width: 24,),
                   Expanded(
-                  flex: 1,
+                  flex: 2,
                   child: Column(
                     
                             children: [

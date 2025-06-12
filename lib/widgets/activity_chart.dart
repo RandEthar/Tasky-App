@@ -15,6 +15,7 @@ class ActivityChart extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      height: 214,
       padding: const EdgeInsets.all(20),
       decoration: const BoxDecoration(
         color: AppColor.contanrackground,

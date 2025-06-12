@@ -12,7 +12,7 @@ class InActiveCustomDrawerItem extends StatelessWidget {
     return AnimatedContainer(
          duration: const Duration(milliseconds: 300),
       curve: Curves.easeInOut,
-      padding: const EdgeInsets.only(left:20, right: 20, top: 10, bottom: 10),
+      padding: const EdgeInsets.only(left:20,  top: 10, bottom: 10),
       decoration: BoxDecoration(
       
         borderRadius: BorderRadius.circular(8),
@@ -23,7 +23,7 @@ class InActiveCustomDrawerItem extends StatelessWidget {
             item.iconPath,
           ),
           const SizedBox(width: 16),
-          Text(item.title, style: TextStyles.medium24),
+           Text(item.title, style: TextStyles.medium24),
         ],
       ),
     );

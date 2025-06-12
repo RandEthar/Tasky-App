@@ -1,15 +1,52 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:intl/intl.dart';
+import 'package:tasky_app/core/helper_function.dart/scroll_list.dart';
+
 import 'package:tasky_app/core/utils/app_color.dart';
 import 'package:tasky_app/core/utils/app_images.dart';
 import 'package:tasky_app/core/utils/app_styles.dart';
-import 'package:tasky_app/widgets/week_calender_item.dart';
 
-class WeekCalendar extends StatelessWidget {
+import 'package:tasky_app/widgets/week_calender_listview.dart';
+
+class WeekCalendar extends StatefulWidget {
   const WeekCalendar({super.key});
 
   @override
+  State<WeekCalendar> createState() => _WeekCalendarState();
+}
+
+class _WeekCalendarState extends State<WeekCalendar> {
+  late ScrollController controller;
+
+  bool isScrollLeft = false;
+  bool isScrollRight = true;
+
+  @override
+  void initState() {
+
+    super.initState();
+    controller = ScrollController();
+  }
+
+  @override
+  void dispose() {
+
+    super.dispose();
+    controller.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
+
+    DateTime today=DateTime.now();
+
+
+    int totalDayinMonth=DateTime(today.year,today.month+1,0).day;
+
+    log("today:" +today.toString());
     return Container(
       padding: const EdgeInsets.all(24),
       decoration: const BoxDecoration(
@@ -21,35 +58,44 @@ class WeekCalendar extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(
-
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              SvgPicture.asset(Assets.imagesArrowLeft),
+              GestureDetector(
+                  onTap: () {
+                    scrollLeft(scrollController: controller);
+                    setState(() {
+                      isScrollLeft = true;
+                      isScrollRight = false;
+                    });
+                  },
+                  child: SvgPicture.asset(isScrollLeft
+                      ? Assets.imagesArrowLeftActive
+                      : Assets.imagesArrowLeft)),
               Text(
-                "July 2022",
+                 DateFormat.yMMMM().format(today),
                 style: TextStyles.medium14,
               ),
-              SvgPicture.asset(Assets.imagesArrowRight)
+              GestureDetector(
+                  onTap: () {
+                    scrollRight(scrollController: controller);
+                    setState(() {
+                      isScrollLeft = false;
+                      isScrollRight = true;
+                    });
+                  },
+                  child: SvgPicture.asset(isScrollRight
+                      ? Assets.imagesArrowRight
+                      : Assets.imagesArrowRightInactive))
             ],
           ),
           const SizedBox(
             height: 30,
           ),
-      SizedBox(
-        
-            height: 72,
-            child: ListView.builder(
-                scrollDirection: Axis.horizontal,
-                itemCount: 10,
-                itemBuilder: (context, index) {
-                  return const Padding(
-                    padding: EdgeInsets.only(right: 18),
-                    child: WeekCalenderItem(),
-                  );
-                }),
-          )
+          WeekCalenderListView(controller: controller, totalDayinMonth: totalDayinMonth, today: today)
         ],
       ),
     );
   }
 }
+
+
