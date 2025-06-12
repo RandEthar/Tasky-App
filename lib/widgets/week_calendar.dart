@@ -46,7 +46,6 @@ class _WeekCalendarState extends State<WeekCalendar> {
 
     int totalDayinMonth=DateTime(today.year,today.month+1,0).day;
 
-    log("today:" +today.toString());
     return Container(
       padding: const EdgeInsets.all(24),
       decoration: const BoxDecoration(

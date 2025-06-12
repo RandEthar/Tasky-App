@@ -15,7 +15,9 @@ final DateTime date;
     String dayLetter=DateFormat.E().format(date)[0];
       String dayNumber=date.day.toString();
       log(dayNumber);
-    return Container(
+    return AnimatedContainer(
+        duration:const Duration(milliseconds: 300),
+      curve: Curves.bounceIn,
       padding:const EdgeInsets.all(6),
       width:40 ,height: 72,
       decoration: BoxDecoration(

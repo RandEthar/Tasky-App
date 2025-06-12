@@ -4,6 +4,7 @@ import 'package:tasky_app/widgets/dashboard_body_header.dart';
 import 'package:tasky_app/widgets/monthly_mentors_section.dart';
 
 import 'package:tasky_app/widgets/percent_indicator_section.dart';
+import 'package:tasky_app/widgets/task_today_section.dart';
 import 'package:tasky_app/widgets/upcoming_task_section.dart';
 import 'package:tasky_app/widgets/week_calendar.dart';
 
@@ -46,7 +47,9 @@ class DashboardBody extends StatelessWidget {
                   child: Column(
                     
                             children: [
-                 WeekCalendar()
+                 WeekCalendar(),
+                 SizedBox(height: 20),
+                 TaskTodaySection()
                             ],
                           ),
                 ),
