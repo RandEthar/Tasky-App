@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tasky_app/core/utils/app_color.dart';
 import 'package:tasky_app/core/utils/app_styles.dart';
+import 'package:tasky_app/widgets/custom_text_button.dart';
 import 'package:tasky_app/widgets/detail_task_item_list_view.dart';
 
 import 'package:tasky_app/widgets/task_widget.dart';
@@ -41,30 +42,37 @@ class TaskTodaySection extends StatelessWidget {
           const SizedBox(
             height: 20,
           ),
-          const TaskWidget(height: 160,),
+          const TaskWidget(
+            height: 160,
+          ),
           const Divider(
             height: 64,
             color: Colors.white,
-          ),Row(
+          ),
+          Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-             Text(
-          'Detail Task',
-          style: TextStyles.semiBold16),
-             Text(
-          'UI UX Design',
-          style: TextStyles.medium12.copyWith(
-          color: const Color(0x7FEBEDFA),
-          )),
-          ],),
-            const SizedBox(
+              Text('Detail Task', style: TextStyles.semiBold16),
+              Text('UI UX Design',
+                  style: TextStyles.medium12.copyWith(
+                    color: const Color(0x7FEBEDFA),
+                  )),
+            ],
+          ),
+          const SizedBox(
             height: 20,
           ),
-         const DetailTaskItemListView()
+          const DetailTaskItemListView(),
+          const SizedBox(
+            height: 56,
+          ),
+         const CustomTextButton(),
+          const SizedBox(
+            height: 36,
+          ),
         ],
       ),
     );
   }
 }
-
 

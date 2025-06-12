@@ -6,16 +6,13 @@ class DetailTaskItemListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      shrinkWrap: true, 
-      physics: const NeverScrollableScrollPhysics(),
-      itemCount: 3,
-  
-      itemBuilder: (context, index) {
-      return Padding(
-        padding: const EdgeInsets.only(bottom: 20),
-        child: DetailTaskItem(numberTask: index+1,),
-      );
-    });
+    return Column( 
+      children: List.generate(3, (index) {
+        return Padding(
+          padding: const EdgeInsets.only(bottom: 20),
+          child: DetailTaskItem(numberTask: index + 1),
+        );
+      }),
+    );
   }
 }
