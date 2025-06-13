@@ -9,16 +9,17 @@ import 'package:tasky_app/core/utils/app_styles.dart';
 import 'package:tasky_app/widgets/custom_mobile_app_bar.dart';
 
 class DashboardMobileBodyHeader extends StatelessWidget {
-  const DashboardMobileBodyHeader({super.key});
+  const DashboardMobileBodyHeader({super.key, required this.scaffoldKey});
+   final GlobalKey<ScaffoldState>scaffoldKey;
 
   @override
   Widget build(BuildContext context) {
     return    Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-           const Padding(
-              padding:  EdgeInsets.symmetric(horizontal: 24),
-              child: CustomMobileAppBar(),
+           Padding(
+              padding: const  EdgeInsets.symmetric(horizontal: 24),
+              child: CustomMobileAppBar(scaffoldKey:scaffoldKey ,),
             ),
            const Divider(
               height: 72,

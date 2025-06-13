@@ -6,25 +6,25 @@ import 'package:tasky_app/widgets/custom_drawer.dart';
 import 'package:tasky_app/widgets/dashboard_mobile_layout.dart';
 
 class DashboardTabletLayout extends StatelessWidget {
-  const DashboardTabletLayout({super.key});
-
+  const DashboardTabletLayout({super.key, required this.scaffoldKey});
+final   GlobalKey<ScaffoldState>  scaffoldKey;
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-     padding: EdgeInsets.symmetric(horizontal: 46, vertical: 64),
+    return  Padding(
+     padding:const EdgeInsets.symmetric(horizontal: 46, vertical: 64),
       child: Row(
         
         
         children: [
-                  Expanded(flex: 1,
+               const   Expanded(flex: 2,
          
             child: CustomDrawer()),
-            SizedBox(
+          const  SizedBox(
               width: 20,
             ),
                  Expanded(
                     flex: 3,
-                    child:DashBoardMobileLayout(),
+                    child:DashBoardMobileLayout(scaffoldKey: scaffoldKey),
                   ),
       
       ],),

@@ -22,9 +22,9 @@ class ActiveCustomDrawerItem extends StatelessWidget {
         color: AppColor.secondary,
         borderRadius: BorderRadius.circular(8),
       ),
-      child: Container(
+      child: 
        
-        child: Row(
+        Row(
      
           children: [
             SvgPicture.asset(
@@ -35,7 +35,7 @@ class ActiveCustomDrawerItem extends StatelessWidget {
            Text(item.title, style: TextStyles.medium24),
           ],
         ),
-      ),
+  
     );
   }
 }

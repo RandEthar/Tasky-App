@@ -12,9 +12,9 @@ import 'package:tasky_app/widgets/week_calendar.dart';
 
 class DashBoardMobileLayout extends StatelessWidget {
   const DashBoardMobileLayout({
-    super.key,
+    super.key,required   this.scaffoldKey,
   });
-
+final   GlobalKey<ScaffoldState>  scaffoldKey;
   @override
   Widget build(BuildContext context) {
     return  CustomScrollView(slivers: [
@@ -24,7 +24,7 @@ class DashBoardMobileLayout extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
         
-             checkTabletLayout(context: context)?const DashboardBodyHeader():const DashboardMobileBodyHeader(),
+             checkTabletLayout(context: context)?const DashboardBodyHeader(): DashboardMobileBodyHeader(scaffoldKey:scaffoldKey! ,),
           SizedBox(height:  checkTabletLayout(context: context)? 20:32),
     Expanded(
        child: Padding(
