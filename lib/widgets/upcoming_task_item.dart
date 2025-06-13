@@ -3,11 +3,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:tasky_app/core/utils/app_color.dart';
-import 'package:tasky_app/core/utils/app_images.dart';
-import 'package:tasky_app/core/utils/app_styles.dart';
-import 'package:tasky_app/widgets/slider_widget.dart';
 
-import 'package:tasky_app/widgets/task_buttom_row.dart';
 import 'package:tasky_app/widgets/task_widget.dart';
 
 class UpcomingTaskItem extends StatelessWidget {

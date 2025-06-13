@@ -18,13 +18,15 @@ class DashboardBody extends StatelessWidget {
         SliverFillRemaining(
           hasScrollBody: false,
             child: Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Expanded(
                   flex: 3,
                   child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
                             children: [
                   DashboardBodyHeader(),
-                  SizedBox(height: 20),
+                 
                   Expanded(
                     child: Row(
                       children: [
@@ -34,7 +36,7 @@ class DashboardBody extends StatelessWidget {
                       ],
                     ),
                   ),
-                  SizedBox(height: 20),
+                
                   MonthlyMentorsSection(),
                   SizedBox(height: 20),
                   UpcomingTaskSection(),
