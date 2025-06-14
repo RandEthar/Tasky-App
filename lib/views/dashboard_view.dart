@@ -22,10 +22,12 @@ class _DashboardViewState extends State<DashboardView> {
       key: scaffoldKey,
     drawer: checkTabletLayout(context: context)?null:const CustomDrawer(),
       backgroundColor: AppColor.background,
-      body: AdaptiveLayoutWidget(
-        mobileLayout: (context) =>  DashBoardMobileLayout(scaffoldKey: scaffoldKey,),
-        tabletLayout: (context) =>  DashboardTabletLayout(scaffoldKey:scaffoldKey ,),
-        desktopLayout: (context) => const DashboardDesktopLayout(),
+      body: SafeArea(
+        child: AdaptiveLayoutWidget(
+          mobileLayout: (context) =>  DashBoardMobileLayout(scaffoldKey: scaffoldKey,),
+          tabletLayout: (context) =>  DashboardTabletLayout(scaffoldKey:scaffoldKey ,),
+          desktopLayout: (context) => const DashboardDesktopLayout(),
+        ),
       ),
     );
   }

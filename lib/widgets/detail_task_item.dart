@@ -28,9 +28,11 @@ class DetailTaskItem extends StatelessWidget {
      )
       ,const SizedBox(width: 12,),
       
-      Text(
-    'Understanding the tools in Figma',
-    style: TextStyles.medium14),
+      Expanded(
+        child: Text(
+            'Understanding the tools in Figma',
+            style: TextStyles.medium14),
+      ),
     ],);
   }
 }

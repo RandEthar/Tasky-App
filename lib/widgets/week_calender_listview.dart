@@ -4,7 +4,8 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
-import 'package:tasky_app/widgets/active_week_calender_item.dart';
+import 'package:tasky_app/core/helper_function.dart/scroll_to_today_date.dart';
+
 import 'package:tasky_app/widgets/week_calender_item.dart';
 
 
@@ -27,12 +28,18 @@ class WeekCalenderListView extends StatefulWidget {
 class _WeekCalenderListViewState extends State<WeekCalenderListView> {
   late int isSelectedItem;
 
-  @override
-  void initState() {
-    super.initState();
-    isSelectedItem = widget.today.day; 
-    log(isSelectedItem.toString());
-  }
+@override
+void initState() {
+  super.initState();
+  isSelectedItem = widget.today.day;
+    
+
+  WidgetsBinding.instance.addPostFrameCallback((_) {
+     scrollToTodayDate(controller: widget.controller,todayDate:widget.today.day);
+  });
+
+}
+
   @override
   Widget build(BuildContext context) {
     return SizedBox(
