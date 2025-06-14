@@ -12,18 +12,19 @@ class UpcomingTaskListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-     height: 317,
-      child: ListView.builder(
-        controller: scrollController,
-       scrollDirection: Axis.horizontal,
-        itemCount: 5,
-     
-       itemBuilder: (context, index) {
-        return  const Padding(
-          padding:  EdgeInsets.only(right: 32),
-          child:IntrinsicWidth(child:UpcomingTaskItem()),
-        );
-      },),
-    );
+  height: 340,
+  child: ListView.builder(
+    controller: scrollController,
+    scrollDirection: Axis.horizontal,
+    itemCount: 5,
+    itemBuilder: (context, index) {
+      return const Padding(
+        padding: EdgeInsets.only(right: 32),
+        child: IntrinsicWidth(child: UpcomingTaskItem()),
+      );
+    },
+  ),
+);
+
   }
 }

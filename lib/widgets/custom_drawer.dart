@@ -10,22 +10,24 @@ class CustomDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: MediaQuery.of(context).size.width*0.7,
-      padding: const EdgeInsets.only(left: 28, right: 28, top: 30),
-      decoration: const BoxDecoration(
-        color: AppColor.contanrackground,
-        borderRadius: BorderRadius.all(Radius.circular(16.0)),
+    return SafeArea(
+      child: Container(
+        width: MediaQuery.of(context).size.width*0.7,
+        padding: const EdgeInsets.only(left: 28, right: 28, top: 30),
+        decoration: const BoxDecoration(
+          color: AppColor.contanrackground,
+          borderRadius: BorderRadius.all(Radius.circular(16.0)),
+        ),
+      child: const CustomScrollView(
+        slivers: [
+      SliverToBoxAdapter(child: CustomDrawerHeader()),
+      SliverToBoxAdapter(child: SizedBox(height: 58)),
+        DrawerListView(),
+      
+        ],
       ),
-    child: const CustomScrollView(
-  slivers: [
-    SliverToBoxAdapter(child: CustomDrawerHeader()),
-    SliverToBoxAdapter(child: SizedBox(height: 58)),
-      DrawerListView(),
-    
-  ],
-),
-
+      
+      ),
     );
   }
 }

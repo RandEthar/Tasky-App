@@ -3,28 +3,29 @@
 
 import 'package:flutter/material.dart';
 import 'package:tasky_app/widgets/custom_drawer.dart';
-import 'package:tasky_app/widgets/dashboard_mobile_layout.dart';
+
+import 'package:tasky_app/widgets/tablet_body.dart';
 
 class DashboardTabletLayout extends StatelessWidget {
-  const DashboardTabletLayout({super.key, required this.scaffoldKey});
-final   GlobalKey<ScaffoldState>  scaffoldKey;
+  const DashboardTabletLayout({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return  Padding(
-     padding:const EdgeInsets.symmetric(horizontal: 46, vertical: 64),
+    return  const Padding(
+     padding: EdgeInsets.symmetric(horizontal: 46, vertical: 64),
       child: Row(
         
         
         children: [
-               const   Expanded(flex: 2,
+               Expanded(flex: 2,
          
             child: CustomDrawer()),
-          const  SizedBox(
+        SizedBox(
               width: 20,
             ),
                  Expanded(
                     flex: 3,
-                    child:DashBoardMobileLayout(scaffoldKey: scaffoldKey),
+                    child:TabletBody(),
                   ),
       
       ],),

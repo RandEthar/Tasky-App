@@ -17,7 +17,7 @@ class TasksAndReviews extends StatelessWidget {
               width: 24,
             ),const SizedBox(width: 8,),
             Text( '40 Task',
-              style: TextStyles.medium14.copyWith(
+              style: TextStyles.medium14(context).copyWith(
                 color: const Color(0x7FEBEDFA),
             ),)
         ],),
@@ -28,7 +28,7 @@ class TasksAndReviews extends StatelessWidget {
               width: 24,
             ),const SizedBox(width: 8,),
             Text( '4,7 (750 Reviews)',
-              style: TextStyles.medium14,
+              style: TextStyles.medium14(context),
             ),
         ],),
 

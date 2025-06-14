@@ -25,7 +25,7 @@ class CustomTextButton extends StatelessWidget {
         child: Text(
           "Go To Detail",
           
-          style: TextStyles.semiBold14.copyWith(
+          style: TextStyles.semiBold14(context).copyWith(
             color: Colors.white
           ),
         ));

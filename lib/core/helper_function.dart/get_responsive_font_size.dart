@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tasky_app/core/utils/size_config.dart';
 
 /// Returns a responsive font size based on screen width.
 /// Keeps the result within [min, max] limits to avoid extreme scaling.
@@ -20,11 +21,11 @@ double getResponsiveFontSize({
 double _getScaleFactor({required BuildContext context}) {
   final width = MediaQuery.sizeOf(context).width;
 
-  if (width < 800) {
-    return width / 600; // Mobile
-  } else if (width < 1200) {
+  if (width < SizeConfig.taplet) {
+    return width / 500; // Mobile
+  } else if (width < SizeConfig.taplet) {
     return width / 1000; // Tablet
   } else {
-    return width / 1300; // Desktop
+    return width / 1400; // Desktop
   }
 }

@@ -23,7 +23,7 @@ class TaskBottomRow extends StatelessWidget {
             const SizedBox(
               width: 8,
             ),
-            Text("3 Days Left", style: TextStyles.medium16)
+            Text("3 Days Left", style: TextStyles.medium16(context))
           ],
         ),
        SizedBox(

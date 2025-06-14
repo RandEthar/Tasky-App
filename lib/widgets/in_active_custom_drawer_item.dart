@@ -23,7 +23,7 @@ class InActiveCustomDrawerItem extends StatelessWidget {
             item.iconPath,
           ),
           const SizedBox(width: 16),
-           Text(item.title, style: TextStyles.medium24),
+           Text(item.title, style: TextStyles.medium24(context)),
         ],
       ),
     );

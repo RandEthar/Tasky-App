@@ -18,7 +18,7 @@ class PercentIndicator extends StatelessWidget {
                   animation: true,
                 animationDuration: 800,
                    percent:.65,
-                  center: Text("65%",style: TextStyles.medium18,),
+                  center: Text("65%",style: TextStyles.medium18(context),),
                   progressColor:AppColor.secondary,
                   backgroundColor:Colors.white12,
                   circularStrokeCap: CircularStrokeCap.round,

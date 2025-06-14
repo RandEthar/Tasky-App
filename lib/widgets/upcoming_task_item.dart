@@ -16,5 +16,5 @@ class UpcomingTaskItem extends StatelessWidget {
       decoration: const BoxDecoration(
         color: AppColor.contanrackground,
         borderRadius: BorderRadius.all(Radius.circular(10)),
-      ),child:const TaskWidget(height: 110,width: 280,),);}}
+      ),child:IntrinsicHeight(child: const TaskWidget(height: 110,width: 280,)),);}}
 

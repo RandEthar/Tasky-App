@@ -16,7 +16,7 @@ class MonthlyMentorsHeader extends StatelessWidget {
       children: [
         Text(
           'Monthly Mentors',
-          style: TextStyles.semiBold24
+          style: TextStyles.semiBold24(context)
         ),
        Row(children: [ SvgPicture.asset(Assets.imagesArrowLeft,
           height: 24,

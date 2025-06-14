@@ -72,7 +72,7 @@ class _WeekCalendarState extends State<WeekCalendar> {
                       : Assets.imagesArrowLeft)),
               Text(
                  DateFormat.yMMMM().format(today),
-                style: TextStyles.medium14,
+                style: TextStyles.medium14(context),
               ),
               GestureDetector(
                   onTap: () {

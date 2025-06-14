@@ -26,7 +26,7 @@ class _ActivityChartHeaderState extends State<ActivityChartHeader> {
       children: [
         Text(
           'Activity',
-          style: TextStyles.semiBold16
+          style: TextStyles.semiBold16(context)
         ),
    
        DropdownButton<String>(
@@ -47,7 +47,7 @@ class _ActivityChartHeaderState extends State<ActivityChartHeader> {
           value: e,
           child: Text(
             e,
-            style: TextStyles.medium14.copyWith(
+            style: TextStyles.medium14(context).copyWith(
               color: const Color(0xFFEBEDFA),
             ),
           ),

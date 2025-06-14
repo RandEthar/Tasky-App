@@ -15,7 +15,7 @@ class CustomDrawerHeader extends StatelessWidget {
       children: [
         SvgPicture.asset(height: 40, width: 40, Assets.imagesTaskeManegar),
         const SizedBox(width: 16),
-        Text('Task\nMANAGER', style: TextStyles.semiBold24),
+        Text('Task\nMANAGER', style: TextStyles.semiBold24(context)),
       ],
     );
   }

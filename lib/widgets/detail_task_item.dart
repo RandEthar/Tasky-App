@@ -21,7 +21,7 @@ class DetailTaskItem extends StatelessWidget {
         color: Colors.white,
             borderRadius: BorderRadius.circular(10)
       ),child: Center(
-        child: Text(numberTask.toString(),style:      TextStyles.semiBold14.copyWith(
+        child: Text(numberTask.toString(),style:      TextStyles.semiBold14(context).copyWith(
           color: Colors.black
         )),
       ),
@@ -31,7 +31,7 @@ class DetailTaskItem extends StatelessWidget {
       Expanded(
         child: Text(
             'Understanding the tools in Figma',
-            style: TextStyles.medium14),
+            style: TextStyles.medium14(context)),
       ),
     ],);
   }

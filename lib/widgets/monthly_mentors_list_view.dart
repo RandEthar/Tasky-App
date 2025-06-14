@@ -83,7 +83,7 @@ class _MonthlyMentorsListViewState extends State<MonthlyMentorsListView> {
 
         // The list view
         SizedBox(
-          height: 140,
+          height: 147,
           child: ListView.builder(
             shrinkWrap: true,
             controller: _scrollController,

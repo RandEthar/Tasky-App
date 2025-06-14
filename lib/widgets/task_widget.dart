@@ -28,10 +28,10 @@ class TaskWidget extends StatelessWidget {
          const SizedBox(height: 16,),
         Text(
           'Creating Mobile App Design',
-          style: TextStyles.semiBold16),
+          style: TextStyles.semiBold16(context)),
              Text(
           'UI UX Design',
-          style: TextStyles.medium12.copyWith(
+          style: TextStyles.medium12(context).copyWith(
           color: const Color(0x7FEBEDFA),
           )),
             const SizedBox(height: 16,),

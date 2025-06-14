@@ -25,11 +25,11 @@ class DashboardBodyHeader extends StatelessWidget {
             children: [
              Text(
                 'Hi, Skylar Dias',
-                style: TextStyles.semiBold24
+                style: TextStyles.semiBold24(context)
               ),
                Text(
                 "Let's finish your task today!",
-                style: TextStyles.medium16.copyWith(
+                style: TextStyles.medium16(context).copyWith(
                   color: const Color(0x7FDADADA),
                 )
               ),

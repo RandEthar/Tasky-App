@@ -16,7 +16,7 @@ class UpcomingTaskHeader extends StatelessWidget {
       children: [
         Text(
           'Upcoming Task',
-          style: TextStyles.semiBold24
+          style: TextStyles.semiBold24(context)
         ),
        Row(children: [ SvgPicture.asset(Assets.imagesArrowLeft,
           height: 24,

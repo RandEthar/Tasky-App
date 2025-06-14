@@ -27,12 +27,12 @@ final DateTime date;
       ),child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-           Text(dayLetter,style: TextStyles.medium12,)
+           Text(dayLetter,style: TextStyles.medium12(context),)
            ,
          CircleAvatar(
             radius: 16,
             backgroundColor: Colors.white,
-            child:    Text(dayNumber,style: TextStyles.medium12.copyWith(
+            child:    Text(dayNumber,style: TextStyles.medium12(context).copyWith(
               color:const Color(0xff141522)
             ),),
            )

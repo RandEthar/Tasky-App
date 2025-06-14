@@ -20,9 +20,9 @@ class PercentIndicatorSection extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-             Text("Running Task", style: TextStyles.semiBold16),
+             Text("Running Task", style: TextStyles.semiBold16(context)),
            const  SizedBox(height: 16),
-            Text("65", style: TextStyles.semiBold32),
+            Text("65", style: TextStyles.semiBold32(context)),
                 const  SizedBox(height: 16),
                Row(
          children: [
@@ -31,9 +31,9 @@ class PercentIndicatorSection extends StatelessWidget {
             Column(
            
               children: [
-               Text("100", style: TextStyles.semiBold20),
+               Text("100", style: TextStyles.semiBold20(context)),
                    const  SizedBox(height: 4),
-                      Text("Task", style: TextStyles.semiBold14.copyWith(
+                      Text("Task", style: TextStyles.semiBold14(context).copyWith(
                          color: const Color(0x7FEBEDFA),
                       )),
               ],

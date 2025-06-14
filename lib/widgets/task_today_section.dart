@@ -24,7 +24,7 @@ class TaskTodaySection extends StatelessWidget {
             children: [
               Text(
                 "Task Today",
-                style: TextStyles.semiBold14,
+                style: TextStyles.semiBold14(context),
               ),
               PopupMenuButton(
                 icon: const Icon(
@@ -52,9 +52,9 @@ class TaskTodaySection extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text('Detail Task', style: TextStyles.semiBold16),
+              Text('Detail Task', style: TextStyles.semiBold16(context)),
               Text('UI UX Design',
-                  style: TextStyles.medium12.copyWith(
+                  style: TextStyles.medium12(context).copyWith(
                     color: const Color(0x7FEBEDFA),
                   )),
             ],

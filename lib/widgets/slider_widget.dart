@@ -19,10 +19,10 @@ class _SliderWidgetState extends State<SliderWidget> {
       children: [
         Row(
           children: [
-            Text("Progress", style: TextStyles.medium16),
+            Text("Progress", style: TextStyles.medium16(context)),
             const Spacer(),
             Text("${_currentValue.round()}%",
-                style: TextStyles.medium16.copyWith(color: AppColor.secondary)),
+                style: TextStyles.medium16(context).copyWith(color: AppColor.secondary)),
           ],
         ),
         SliderTheme(

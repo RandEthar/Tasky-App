@@ -23,10 +23,10 @@ class _ListTileMentorsState extends State<ListTileMentors> {
         contentPadding: EdgeInsets.zero,
     
           leading: Image.asset(Assets.imagesPhoto,height: 48,width: 48,fit: BoxFit.fill,),
-          title:Text('Curious George', style: TextStyles.semiBold16.copyWith(
+          title:Text('Curious George', style: TextStyles.semiBold16(context).copyWith(
             color:  Colors.white,
           )),
-          subtitle:  Text('UI UX Design', style: TextStyles.medium12.copyWith(
+          subtitle:  Text('UI UX Design', style: TextStyles.medium12(context).copyWith(
             color: const Color(0x7FEBEDFA),
           )),
           trailing:   GestureDetector(
@@ -35,7 +35,7 @@ class _ListTileMentorsState extends State<ListTileMentors> {
               setState(() {   addedFrindes =( addedFrindes == '+ Follow ') ? 'Following' : '+ Follow ';});
             log( 'addedFrindes: $addedFrindes');
             },
-            child: Text(addedFrindes, style: TextStyles.medium14.copyWith(
+            child: Text(addedFrindes, style: TextStyles.medium14(context).copyWith(
               color: const Color(0x7FEBEDFA),
             )),
           ),

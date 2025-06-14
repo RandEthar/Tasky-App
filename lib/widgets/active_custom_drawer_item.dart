@@ -32,7 +32,7 @@ class ActiveCustomDrawerItem extends StatelessWidget {
             ),
           const  SizedBox(width: 16,),
            
-           Text(item.title, style: TextStyles.medium24),
+           Text(item.title, style: TextStyles.medium24(context)),
           ],
         ),
   

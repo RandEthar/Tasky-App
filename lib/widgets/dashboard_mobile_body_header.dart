@@ -26,11 +26,11 @@ class DashboardMobileBodyHeader extends StatelessWidget {
            padding:const  EdgeInsets.symmetric(horizontal: 24),
              child: Column(children: [  Text(
                   'Hi, Skylar Dias',
-                  style: TextStyles.semiBold24
+                  style: TextStyles.semiBold24(context)
                 ),
                  Text(
                   "Let's finish your task today!",
-                  style: TextStyles.medium14.copyWith(
+                  style: TextStyles.medium14(context).copyWith(
                     color: const Color(0x7FDADADA),
                   )
                 ),],),

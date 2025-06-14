@@ -54,7 +54,7 @@ class _UpcomingTaskSectionState extends State<UpcomingTaskSection> {
       children: [
         Text(
           'Upcoming Task',
-          style: TextStyles.semiBold24
+          style: TextStyles.semiBold24(context)
         ),
        Row(children: [ GestureDetector(
         onTap: scrollLeft,

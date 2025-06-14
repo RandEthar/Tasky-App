@@ -15,12 +15,12 @@ class MonthlyMentorsListItem extends StatelessWidget {
         color: AppColor.contanrackground,
         borderRadius: BorderRadius.all(Radius.circular(10)),
       ),child:  const Column(
-      
+       crossAxisAlignment: CrossAxisAlignment.start,
         children: [
 
        ListTileMentors(),
   SizedBox(height: 10),
-    FittedBox(child: TasksAndReviews()),
+    TasksAndReviews(),
       ],),
       
       
