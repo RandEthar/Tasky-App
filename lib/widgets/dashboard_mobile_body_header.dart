@@ -17,10 +17,7 @@ class DashboardMobileBodyHeader extends StatelessWidget {
     return    Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-           Padding(
-              padding: const  EdgeInsets.symmetric(horizontal: 24),
-              child: CustomMobileAppBar(scaffoldKey:scaffoldKey ,),
-            ),
+           CustomMobileAppBar(scaffoldKey:scaffoldKey ,),
            const Divider(
               height: 72,
               color: Colors.white,

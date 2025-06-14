@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tasky_app/core/helper_function.dart/check_tablet_layout.dart';
 import 'package:tasky_app/core/utils/app_color.dart';
+import 'package:tasky_app/core/utils/size_config.dart';
 import 'package:tasky_app/widgets/adaptive_layout_widget.dart';
 import 'package:tasky_app/widgets/custom_drawer.dart';
 import 'package:tasky_app/widgets/dashboard_desktop_layout.dart';
@@ -18,6 +19,8 @@ class _DashboardViewState extends State<DashboardView> {
   GlobalKey<ScaffoldState>scaffoldKey=  GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
+
+
     return Scaffold(
       key: scaffoldKey,
     drawer: checkTabletLayout(context: context)?null:const CustomDrawer(),

@@ -22,7 +22,7 @@ class MonthlyMentorsHeader extends StatelessWidget {
           height: 24,
           width: 24,
         ),
-       const SizedBox(width: 10,),
+     
           SvgPicture.asset(Assets.imagesArrowRight,
           height: 24,
           width: 24,

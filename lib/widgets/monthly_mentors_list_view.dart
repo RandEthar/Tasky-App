@@ -13,21 +13,19 @@ class MonthlyMentorsListView extends StatefulWidget {
 }
 
 class _MonthlyMentorsListViewState extends State<MonthlyMentorsListView> {
-  late ScrollController _scrollController ;
+  late ScrollController _scrollController;
   bool activeRight = true;
   bool activeLeft = false;
-@override
+  @override
   void initState() {
-    // TODO: implement initState
+
     super.initState();
     _scrollController = ScrollController();
   }
 
-
- 
   @override
   void dispose() {
-    // TODO: implement dispose
+   
     super.dispose();
     _scrollController.dispose();
   }
@@ -46,37 +44,36 @@ class _MonthlyMentorsListViewState extends State<MonthlyMentorsListView> {
             ),
             Row(
               children: [
-                IconButton(
-                  icon: SvgPicture.asset(
-                      activeLeft
-                          ? Assets.imagesArrowLeftActive
-                          : Assets.imagesArrowLeft,
-                      height: 24),
-                  onPressed: () {
+                GestureDetector(
+                  onTap: () {
                     scrollLeft(scrollController: _scrollController);
-
 
                     setState(() {
                       activeLeft = true;
                       activeRight = false;
                     });
                   },
+                  child: SvgPicture.asset(
+                      activeLeft
+                          ? Assets.imagesArrowLeftActive
+                          : Assets.imagesArrowLeft,
+                      height: 24),
                 ),
                 const SizedBox(width: 10),
-                IconButton(
-                  icon: SvgPicture.asset(
-                      activeRight
-                          ? Assets.imagesArrowRight
-                          : Assets.imagesArrowRightInactive,
-                      height: 24),
-                  onPressed: () {
+                GestureDetector(
+                  onTap: () {
                     scrollRight(scrollController: _scrollController);
                     setState(() {
                       activeRight = true;
                       activeLeft = false;
                     });
                   },
-                ),
+                  child: SvgPicture.asset(
+                      activeRight
+                          ? Assets.imagesArrowRight
+                          : Assets.imagesArrowRightInactive,
+                      height: 24),
+                )
               ],
             )
           ],
