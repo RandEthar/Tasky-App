@@ -34,6 +34,10 @@ class Assets {
   /// assets/images/image.jpeg
   static const String imagesImage = "assets/images/image.jpeg";
 
+  /// Assets for imagesImagePoster
+  /// assets/images/image_Poster.jpg
+  static const String imagesImagePoster = "assets/images/image_Poster.jpg";
+
   /// Assets for imagesImages
   /// assets/images/images.svg
   static const String imagesImages = "assets/images/images.svg";
@@ -97,5 +101,9 @@ class Assets {
   /// Assets for imagesTimeCircle
   /// assets/images/Time_Circle.svg
   static const String imagesTimeCircle = "assets/images/Time_Circle.svg";
+
+  /// Assets for imagesWebPhoto
+  /// assets/images/webPhoto.jpg
+  static const String imagesWebPhoto = "assets/images/webPhoto.jpg";
 }
 

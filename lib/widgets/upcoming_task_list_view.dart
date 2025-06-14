@@ -2,6 +2,7 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:tasky_app/core/models.dart/upcoming_task_mobel.dart';
 import 'package:tasky_app/widgets/upcoming_task_item.dart';
 
 class UpcomingTaskListView extends StatelessWidget {
@@ -16,11 +17,11 @@ class UpcomingTaskListView extends StatelessWidget {
   child: ListView.builder(
     controller: scrollController,
     scrollDirection: Axis.horizontal,
-    itemCount: 5,
+    itemCount:upcomingTaskList.length,
     itemBuilder: (context, index) {
-      return const Padding(
-        padding: EdgeInsets.only(right: 32),
-        child: IntrinsicWidth(child: UpcomingTaskItem()),
+      return Padding(
+        padding: const  EdgeInsets.only(right: 32),
+        child: IntrinsicWidth(child: UpcomingTaskItem(upcomingTaskMobel: upcomingTaskList[index],)),
       );
     },
   ),

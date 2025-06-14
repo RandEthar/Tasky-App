@@ -12,6 +12,7 @@ class PercentIndicatorSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      height:214,
       padding: const EdgeInsets.only(left: 20,  top: 20,  bottom: 22,right: 36),
       decoration: const BoxDecoration(
         color: AppColor.contanrackground,

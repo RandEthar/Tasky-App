@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:tasky_app/core/models.dart/upcoming_task_mobel.dart';
 import 'package:tasky_app/core/utils/app_color.dart';
+import 'package:tasky_app/core/utils/app_images.dart';
 import 'package:tasky_app/core/utils/app_styles.dart';
 import 'package:tasky_app/widgets/custom_text_button.dart';
 import 'package:tasky_app/widgets/detail_task_item_list_view.dart';
@@ -8,7 +10,7 @@ import 'package:tasky_app/widgets/task_widget.dart';
 
 class TaskTodaySection extends StatelessWidget {
   const TaskTodaySection({super.key});
-
+     
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -42,7 +44,14 @@ class TaskTodaySection extends StatelessWidget {
           const SizedBox(
             height: 20,
           ),
-          const TaskWidget(
+          TaskWidget(
+          upcomingTaskMobel:  UpcomingTaskMobel(
+    title: 'Creating Mobile App Design',
+    subTitle: 'UI UX Design',
+    imagePath: Assets.imagesCreatingMobileDesign,
+
+    daysLeft: 3,
+  ),
             height: 160,
           ),
           const Divider(

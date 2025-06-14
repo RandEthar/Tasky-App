@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:tasky_app/core/models.dart/upcoming_task_mobel.dart';
 import 'package:tasky_app/core/utils/app_images.dart';
 import 'package:tasky_app/core/utils/app_styles.dart';
 import 'package:tasky_app/widgets/avatars.dart';
 
 class TaskBottomRow extends StatelessWidget {
-  const TaskBottomRow({super.key});
-
+  const TaskBottomRow({super.key, required this.upcomingTaskMobel});
+     final UpcomingTaskMobel upcomingTaskMobel;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -23,7 +24,7 @@ class TaskBottomRow extends StatelessWidget {
             const SizedBox(
               width: 8,
             ),
-            Text("3 Days Left", style: TextStyles.medium16(context))
+            Text("${upcomingTaskMobel.daysLeft} Days Left", style: TextStyles.medium16(context))
           ],
         ),
        SizedBox(
@@ -44,10 +45,10 @@ class TaskBottomRow extends StatelessWidget {
 }
 
 List<Widget> avatarsList = [
-  const Avatars(),
-  const Avatars(),
-  const Avatars(),
-  const Avatars(),
+  const Avatars(imagePath: Assets.imagesPhoto2,),
+  const Avatars(imagePath: Assets.imagesPhoto,),
+  const Avatars(imagePath: Assets.imagesProfil,),
+  const Avatars(imagePath: Assets.imagesRand,),
 ];
 
 int calculatedWidth(int avatarSize,int overlap,int listLength){

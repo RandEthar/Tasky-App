@@ -1,17 +1,12 @@
 
-
-
 import 'package:flutter/material.dart';
-
 import 'package:tasky_app/widgets/activity_chart.dart';
-
-
+import 'package:tasky_app/widgets/dashboard_body_header.dart';
 import 'package:tasky_app/widgets/monthly_mentors_section.dart';
 import 'package:tasky_app/widgets/percent_indicator_section.dart';
 import 'package:tasky_app/widgets/task_today_section.dart';
 import 'package:tasky_app/widgets/upcoming_task_section.dart';
 import 'package:tasky_app/widgets/week_calendar.dart';
-
 class TabletBody extends StatelessWidget {
   const TabletBody({
     super.key
@@ -24,12 +19,14 @@ class TabletBody extends StatelessWidget {
         hasScrollBody: false,
         child: Expanded(
            child: Column(children: [  
+              DashboardBodyHeader(),
              SizedBox(height: 20),
                Expanded(
                     child: Row(
                       children: [
-                        IntrinsicHeight(child: PercentIndicatorSection()),
-                        SizedBox(width: 36),
+                       
+                        PercentIndicatorSection(),
+                         SizedBox(width: 36),
                         Expanded(child: ActivityChart()),
                       ],
                     ),
