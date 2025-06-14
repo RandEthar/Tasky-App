@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:tasky_app/core/helper_function.dart/scroll_list.dart';
+import 'package:tasky_app/core/models.dart/monthly_mentors_model.dart';
 import 'package:tasky_app/core/utils/app_images.dart';
 
 import 'package:tasky_app/widgets/monthly_mentors_list_item.dart';
@@ -88,11 +89,11 @@ class _MonthlyMentorsListViewState extends State<MonthlyMentorsListView> {
             shrinkWrap: true,
             controller: _scrollController,
             scrollDirection: Axis.horizontal,
-            itemCount: 10,
+            itemCount:  monthlyMentorsList.length,
             itemBuilder: (context, index) {
-              return const Padding(
-                padding: EdgeInsets.only(right: 32),
-                child: IntrinsicWidth(child: MonthlyMentorsListItem()),
+              return  Padding(
+                padding:const EdgeInsets.only(right: 32),
+                child: IntrinsicWidth(child: MonthlyMentorsListItem(monthlyMentorsModel:  monthlyMentorsList[index],)),
               );
             },
           ),
