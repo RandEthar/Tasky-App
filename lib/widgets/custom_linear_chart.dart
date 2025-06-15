@@ -10,11 +10,10 @@ class CustomLinearChart extends StatelessWidget {
       height: 200,
       child: LineChart(
         LineChartData(
-          // ✅ لإخفاء الخطوط المربعة والإطار
+  
           gridData: FlGridData(show: false),
           borderData: FlBorderData(show: false),
 
-          // ✅ Tooltip
           lineTouchData: LineTouchData(
             handleBuiltInTouches: true,
             getTouchedSpotIndicator:
@@ -123,7 +122,7 @@ class CustomLinearChart extends StatelessWidget {
               isStrokeCapRound: true,
               dotData: FlDotData(
                 show: true,
-                checkToShowDot: (spot, barData) => spot.x == 1, // النقطة الزرقا على يوم الاثنين
+                checkToShowDot: (spot, barData) => spot.x == 1, 
                 getDotPainter: (spot, percent, barData, index) =>
                     FlDotCirclePainter(
                   radius: 6,
